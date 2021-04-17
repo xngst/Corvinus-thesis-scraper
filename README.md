@@ -1,6 +1,8 @@
 # Corvinus szd.lib scraper  
 
-## Leírás
+## Leírás  
+### A pdf-ek csak intraneten keresztül elérhetőek. Intranet nélkül csak a html-be ágyaztott metaadatokat lehet látni!  
+
 A python script végigjárja a http://szd.lib.uni-corvinus.hu/ alatt található számmal jelölt oldalakat.   
 Összeállít egy listát a html kód meta-tag-el jelölt részeiből, ezután megpróbálja letölteni a beágyazott pdf documentumot.  
 Ha titkosítva lett a szakdolgozat, akkor a html 404-et fog adni, ezeket a tételeket ignorálja a script.  
@@ -22,17 +24,4 @@ Jelenleg meg kell nyitni a filet a paraméterek beállításához.
     spoof: default False, ha True, akkor referebe beírja, hogy a http://szd.lib.uni-corvinus.hu/cgi/search/advanced oldalról lett átirányítva illetve generál egy random user-agentet.   
     Persze az IP cím így is azonos marad az összes lekérdezésnél.
     download: itt megadhatjuk hogy letöltse-e a pdf-eket a script, default letölt.  
-
-## Installok  
-Python verzió: python3.*  
-ha van fönn standard python installáció, akkor ezeket a modulokat kell telepíteni:  
-pandas, requests, beautifulsoup4, user_agent, openpyxl  
-megosztott gépen ajánlom a user flag használatát:  
-    pip install pandas --user  
-    pip install requests --user  
-    pip install beautifulsoup4 --user  
-    pip install user_agent --user  
-    pip install openpyxl --user  
-    
-## TODO
-requirements.txt
+   
